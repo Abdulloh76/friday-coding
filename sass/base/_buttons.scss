@@ -1,0 +1,37 @@
+.button {
+    padding: 11px 25px 13px;
+    font-family: "Open Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.header__buttons>button:last-child {
+    margin-left: 14px;
+}
+
+.button__colored {
+    color: $color-light;
+    border: 1px solid $color-primary;
+    background-color: $color-primary;
+}
+
+.button__bordered {
+    color: $color-text;
+    border: 1px solid $color-border;
+    background-color: $color-light;
+}
+
+.button__colored:hover {
+    background-color: $color-additional;
+    border-color: $color-additional;
+}
+
+.button__bordered:hover {
+    background-color: $color-hovered;
+    border-color: $color-hovered;
+}
