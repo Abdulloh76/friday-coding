@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Abdulloh76/friday-coding/issues"
   },
-  "homepage": "https://github.com/Abdulloh76/friday-coding#readme"
+  "homepage": "https://github.com/Abdulloh76/friday-coding#readme",
+  "dependencies": {
+    "normalize.scss": "^0.1.0"
+  }
 }

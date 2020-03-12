@@ -1,0 +1,9 @@
+.logo-svg {
+    cursor: pointer;
+    &:hover {
+        .logo-path {
+            fill: $color-primary;
+            @extend %transition;
+        }
+    }
+}
