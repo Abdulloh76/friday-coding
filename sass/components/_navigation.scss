@@ -13,3 +13,9 @@
     }
     @extend %transition;
 }
+
+.header__navigation {
+    @include media-tablet {
+        display: none;
+    }
+}

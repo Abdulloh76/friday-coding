@@ -7,3 +7,11 @@
         }
     }
 }
+.logo {
+    display: inline-flex;
+    align-items: center;
+    &-object {
+        width: 200px;
+        height: 32px;
+    }
+}

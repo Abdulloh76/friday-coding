@@ -1,0 +1,65 @@
+$image-gap: 32px;
+.about-us {
+    margin: 66px 0 101px;
+    @include media-tablet {
+        margin: 50px 0;
+    }
+    @include media-mobile {
+        margin: 40px 0;
+    }
+
+    &__wrapper {
+        @include media-tablet {
+            text-align: center;
+        }
+    }
+    &__title {
+        @include font (3.4rem, 4.6rem);
+        color: $color-heading;
+        margin: 0 0 14px;
+    }
+    &__description {
+        @include font (1.6rem, 2.6rem, normal, normal);
+        margin: 0 0 45px;
+        @include media-tablet {
+            margin: 0 0 37px;
+        }
+    }
+}
+
+.employee {
+    padding: 35px;
+    display: flex;
+    position: relative;
+    width: calc(30%-$image-gap);
+    &__name {
+        @include font (1.6rem, 2.6rem);
+        margin: 0;
+    }
+    &__title {
+        @include font (1.4rem, 2.6rem, normal, normal);
+        margin: 0;
+    }
+    &__contact {
+        @include font (1.4rem, 2.6rem, normal, normal);
+        text-decoration: none;
+        color: $color-link;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__photo  {
+        height: 98px;
+        width: 98px;
+        border-radius: 50%;
+        position: absolute;
+        right: -$image-gap;
+        top: 20px;
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    &-container {
+        padding-right: $image-gap;
+        text-align: left;
+    }
+}
+

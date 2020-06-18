@@ -1,5 +1,12 @@
 .promo {
-    padding: 30px 0;
+    margin: 30px 0 111px;
+    overflow: hidden;
+    @include media-tablet {
+        margin: 0 0 78px;
+    }
+    @include media-mobile {
+        margin: 12px 0 49px;
+    }
 }
 
 .promo__title {
@@ -7,22 +14,65 @@
 }
 
 .promo__text {
-    width: 487px;
+    max-width: 487px;
     padding: 0 0 45px;
     margin: 0;
     @extend %font-add;
     @include font($size: 1.8rem, $weight: normal, $height: 2.8rem);
+    @include media-tablet {
+        width: 380px;
+    }
+    @include media-mobile {
+        width: auto;
+    }
 }
 .promo__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include media-mobile {
+        flex-direction: column-reverse;
+    }
 }
 
 .promo__content {
-    padding-right: 50px;
+    padding-right: 45px;
+    @include media-tablet {
+        padding-right: 0;
+    }
+    @include media-mobile {
+        text-align: center;
+    }
 }
 
-.promo__buttons>*:first-child {
-    margin-right: 44px;
+.promo__buttons {
+    display: flex;
+    align-items: center;
+    & > * {
+        white-space: nowrap;
+        margin-right: 44px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    @include media-mobile {
+        flex-direction: column;
+        & > * {
+            margin-right: 0;
+            margin-bottom: 26px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    } 
+}
+
+.promo__image {
+    @include media-tablet {
+        width: 591px;
+    }
+    @include media-mobile {
+        max-width: 100%;
+        margin-bottom: 16px;
+    }
 }

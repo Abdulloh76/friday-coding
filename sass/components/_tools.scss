@@ -1,28 +1,73 @@
-.tools__wrapper {
-    padding-bottom: 90px;
-    background-image: url("../../img/backgrounds/tools-bg.svg");
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
+.tools {
+    &__wrapper {
+        padding-bottom: 90px;
+        background-image: url("../../img/backgrounds/tools-bg.svg");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        @include media-tablet {
+            padding-bottom: 53px;
+        }
+        @include media-mobile{
+            padding-bottom: 47px;
+        }
+    }
+    
+    &__title {
+        max-width: 462px;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 70px;
+        @include media-tablet {
+            margin-bottom: 0;
+        }
+    }
+    
+    &__button {
+        margin-top: 60px;
+        text-align: center;
+        @include media-mobile {
+            margin-top: 38px;
+        }
 
-.tools__title {
-    max-width: 462px;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 70px;
-}
-
-.tools__button {
-    margin-top: 60px;
-    text-align: center;
+    }
 }
 
 // Tool Block
-.tool-icon {
-    margin-bottom: 30px;
-}
 
-.tool-title {
-    margin: 0 0 26px;
+.tool {
+    @include media-tablet {
+        flex-basis: 40%;
+        margin-top: 54px;
+    }
+    @include media-mobile {
+        flex-basis: 100%;
+        margin-top: 45px;
+    }
+
+    &-container {
+        @include media-laptop {
+            text-align: center;
+        }
+        @include media-tablet {
+            flex-wrap: wrap;
+        }
+    }
+    
+    &-icon {
+        margin-bottom: 30px;
+    }
+    
+    &__title {
+        margin: 30px 0 16px;
+        @include media-tablet {
+            margin: 20px 0 6px;
+        }
+        @include media-tablet {
+            margin: 8px 0 0;
+        }
+    }
+    &__text {
+        margin: 0;
+}
 }

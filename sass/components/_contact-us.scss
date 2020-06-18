@@ -1,5 +1,57 @@
 .contact-us {
     background-color: $color-background;
+    padding: 62px 0;
+    color: $color-text;
+
+    @include media-tablet {
+        text-align: center;
+        padding: 48px 0;
+    }
+    &-container {
+        @include media-tablet {
+            flex-direction: column;
+        }
+    }
+    &__content {
+        @include media-tablet {
+            margin: 0 0 35px;
+        }
+        @include media-mobile {
+            margin: 0 0 41px;
+        }
+    }
+    &__title {
+        margin: 0 0 17px;
+        color: $color-heading;
+    }
+    &__text {
+        margin: 0 0 33px;
+        @include font (1.6rem, 2.6rem, normal, normal);
+        @include media-tablet {
+            margin: 0 0 26px;
+        }
+    }
+    &__link {
+        @include font (2.5rem, 2.6rem, normal, normal);
+        a {
+            margin-left: 11px;
+            color: $color-text;
+            text-decoration: none;
+        }
+        &:hover {
+            a {
+                text-decoration: underline;
+            }
+        }
+        
+        @include media-tablet {
+            margin-bottom: 19px;
+        }
+        @include media-mobile {
+            @include font (2rem, 2.6rem, normal, normal);
+            margin-bottom: 16px;
+        }
+    }
 }
 
 .contact-us__form {
@@ -22,11 +74,28 @@
 }
 
 .contact-us__line {
-    margin-bottom: 19px;
+    > * {
+        margin-bottom: 19px;
+    }
+    @include media-mobile {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
 
 .contact-us__button {
-    >* {
+    margin-top: 20px;
+    > * {
         min-width: 117px;
+        @include media-mobile {
+            min-width: 174px;
+        }
+    }
+    @include media-tablet {
+        margin-top: 26px;
+    }
+    @include media-mobile {
+        margin-top: 24px;
+        min-width: 174px;
     }
 }

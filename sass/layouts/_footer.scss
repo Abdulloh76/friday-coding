@@ -1,0 +1,46 @@
+.footer {
+    padding: 58px 0;
+    @include media-tablet {
+        padding: 47px 0 26px;
+    }
+    @include media-tablet {
+        padding: 30px 0;
+    }
+}
+.footer__wrapper {
+    display: flex;
+    @include media-tablet {
+        flex-direction: column;
+    }
+}
+.footer-navigation {
+    flex-grow: 1;
+    padding-left: 150px;
+    @include media-tablet {
+        padding: 34px 0 0;
+    }
+    @include media-mobile {
+        flex-direction: column;
+    }
+
+    &__title {
+        margin: 0 0 15px;
+        @include font ($size: 2rem, $height: 3rem, $weight:600);
+        color: $color-heading;
+    }
+    
+    &__links {
+        padding-left: 0;
+        list-style: none;
+        a {
+            @include font ($size: 1.6rem, $height: 3.5rem, $weight:normal);
+            @extend %font-add;
+            @extend %transition;
+            color: $color-text;
+            text-decoration: none;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}
