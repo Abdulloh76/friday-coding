@@ -37,6 +37,9 @@
             transition: all 0.4s;
         }
     }
+    &_hidden {
+        display: none;
+    }
     &-wrapper {
         > * {
             margin-bottom: 30px;
@@ -79,5 +82,29 @@
 
     &__image {
         object-fit: cover;
+    }
+
+}
+
+.article-modal__content {
+    .strategy__image {
+        width: 100%;
+    }
+
+    .strategy__date {
+        @include font ($size: 1.3rem, $weight: normal);
+        margin: 0;
+    }
+
+    .strategy__name {
+        margin: 5px 0 9px;
+    }
+
+    .strategy__text {
+        margin: 0;
+    }
+
+    .strategy__tags {
+        margin: 12px 0;
     }
 }

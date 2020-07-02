@@ -1,0 +1,35 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $color-overlay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal {
+    position: relative;
+    border-radius: 10px;
+    background-color: $color-light;
+    width: 675px;
+    max-height: 90%;
+    min-height: 120px;
+    overflow: auto;
+    
+    @include media-tablet {
+        width: 90%;
+    }
+
+    &__close-icon {
+        position: absolute;
+        top: 28px;
+        right: 26px;
+        cursor: pointer;
+        svg {
+            pointer-events: none;
+        }
+    }
+
+}
